@@ -38,7 +38,7 @@ Isi variabel berikut di `.env`:
 
 ```
 HOST=localhost
-PORT=5000
+PORT=3000
 
 PGUSER=postgres
 PGPASSWORD=yourpassword
@@ -62,7 +62,7 @@ npm run migrate
 npm run start:dev
 ```
 
-Server akan berjalan di `http://localhost:5000`
+Server akan berjalan di `http://localhost:3000`
 
 ---
 

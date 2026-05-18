@@ -20,7 +20,7 @@ router.post('/', validateBody(loginSchema), async (req, res, next) => {
     const accessToken = generateAccessToken(user.id);
     const refreshToken = generateRefreshToken(user.id);
     await saveRefreshToken(refreshToken);
-    res.status(201).json({
+    res.status(200).json({
       status: 'success',
       message: 'Login successful',
       data: { accessToken, refreshToken },

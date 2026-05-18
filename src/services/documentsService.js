@@ -7,7 +7,7 @@ const fs = require('fs');
 const createDocument = async ({ user_id, name, file_url, file_type }) => {
   const id = `doc-${uuidv4()}`;
   const result = await pool.query(
-    'INSERT INTO documents (id, user_id, name, file_url, file_type) VALUES ($1,$2,$3,$4,$5) RETURNING id, name, file_url',
+    'INSERT INTO documents (id, user_id, name, file_url, file_type) VALUES ($1,$2,$3,$4,$5) RETURNING id, user_id, name, file_url, file_type, created_at, updated_at',
     [id, user_id, name, file_url, file_type]
   );
   if (!result.rowCount) throw new InvariantError('Failed to upload document');

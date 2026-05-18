@@ -7,7 +7,7 @@ const createCompany = async ({ user_id, name, description, industry, location, w
   const result = await pool.query(
     `INSERT INTO companies (id, user_id, name, description, industry, location, website, logo_url)
      VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
-     RETURNING id, name, description, industry, location, website, logo_url`,
+     RETURNING id, user_id, name, description, industry, location, website, logo_url, created_at, updated_at`,
     [id, user_id, name, description, industry, location, website, logo_url]
   );
   if (!result.rowCount) throw new InvariantError('Failed to create company');
@@ -40,7 +40,7 @@ const updateCompany = async (id, userId, data) => {
   const { name, description, industry, location, website, logo_url } = data;
   const result = await pool.query(
     `UPDATE companies SET name=$1, description=$2, industry=$3, location=$4, website=$5, logo_url=$6, updated_at=current_timestamp
-     WHERE id=$7 RETURNING id, name`,
+     WHERE id=$7 RETURNING id, user_id, name, description, industry, location, website, logo_url, created_at, updated_at`,
     [name, description, industry, location, website, logo_url, id]
   );
   return result.rows[0];

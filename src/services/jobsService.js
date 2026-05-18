@@ -68,7 +68,7 @@ const createJob = async ({ company_id, category_id, title, description, requirem
   const id = `job-${uuidv4()}`;
   const result = await pool.query(
     `INSERT INTO jobs (id, company_id, category_id, title, description, requirements, salary_min, salary_max, location, job_type, is_active)
-     VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING id, title`,
+     VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING id, company_id, category_id, title, description, requirements, salary_min, salary_max, location, job_type, is_active, created_at, updated_at`,
     [id, company_id, category_id || null, title, description, requirements, salary_min, salary_max, location, job_type, is_active]
   );
   if (!result.rowCount) throw new InvariantError('Failed to create job');
@@ -88,7 +88,7 @@ const updateJob = async (id, userId, data) => {
   const result = await pool.query(
     `UPDATE jobs SET company_id=$1, category_id=$2, title=$3, description=$4, requirements=$5,
      salary_min=$6, salary_max=$7, location=$8, job_type=$9, is_active=$10, updated_at=current_timestamp
-     WHERE id=$11 RETURNING id, title`,
+     WHERE id=$11 RETURNING id, company_id, category_id, title, description, requirements, salary_min, salary_max, location, job_type, is_active, created_at, updated_at`,
     [company_id, category_id || null, title, description, requirements, salary_min, salary_max, location, job_type, is_active, id]
   );
   return result.rows[0];

@@ -5,7 +5,7 @@ const { NotFoundError, InvariantError } = require('../utils/errors');
 const createBookmark = async ({ user_id, job_id }) => {
   const id = `bm-${uuidv4()}`;
   const result = await pool.query(
-    'INSERT INTO bookmarks (id, user_id, job_id) VALUES ($1,$2,$3) ON CONFLICT (user_id, job_id) DO NOTHING RETURNING id',
+    'INSERT INTO bookmarks (id, user_id, job_id) VALUES ($1,$2,$3) ON CONFLICT (user_id, job_id) DO NOTHING RETURNING id, user_id, job_id, created_at',
     [id, user_id, job_id]
   );
   if (!result.rowCount) throw new InvariantError('Job already bookmarked');

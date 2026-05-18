@@ -8,7 +8,7 @@ const createUser = async ({ name, email, password, role }) => {
   const hashedPassword = await bcrypt.hash(password, 10);
 
   const result = await pool.query(
-    'INSERT INTO users (id, name, email, password, role) VALUES ($1, $2, $3, $4, $5) RETURNING id, name, email, role',
+    'INSERT INTO users (id, name, email, password, role) VALUES ($1, $2, $3, $4, $5) RETURNING id, name, email, role, created_at, updated_at',
     [id, name, email, hashedPassword, role]
   );
 

@@ -1,22 +1,22 @@
 {
-	"id": "eb579e81-bcfd-437e-9481-4af27bd993fe",
+	"id": "168f5111-962c-4519-bd36-ad37a58f62df",
 	"name": "[271] OpenJob API Test V1",
-	"timestamp": "2026-05-17T15:07:59.810Z",
-	"collection_id": "19555627-af3d035f-5d15-4fbc-8141-8107c125e1e2",
+	"timestamp": "2026-05-18T01:57:47.602Z",
+	"collection_id": "19555627-747e180a-8d53-4605-af2d-4a28aad71d2f",
 	"folder_id": 0,
-	"environment_id": "19555627-c76eb6da-4f86-41d8-80ca-7e4b8f93f18f",
-	"totalPass": 241,
+	"environment_id": "19555627-bea10615-11a3-4a91-a8a8-941c0385383c",
+	"totalPass": 256,
 	"delay": 0,
 	"persist": true,
 	"status": "error",
-	"startedAt": "2026-05-17T15:07:49.082Z",
-	"totalFail": 56,
+	"startedAt": "2026-05-18T01:57:34.291Z",
+	"totalFail": 41,
 	"results": [
 		{
-			"id": "09868274-d655-4433-8862-d538f5cbb4db",
+			"id": "71c45b26-95d8-413a-ae8c-1171c0b33c5b",
 			"name": "Add User with Invalid Payload",
 			"url": "http://localhost:3000/users",
-			"time": 3,
+			"time": 5,
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request"
@@ -46,11 +46,11 @@
 				}
 			},
 			"times": [
-				31,
-				4,
-				3,
-				4,
-				3
+				547,
+				5,
+				5,
+				5,
+				5
 			],
 			"allTests": [
 				{
@@ -86,24 +86,24 @@
 			]
 		},
 		{
-			"id": "9149cd3a-8580-462a-892f-d2763de77812",
+			"id": "8a196dd6-c31c-4bbd-8e43-d4e56dc5c8bc",
 			"name": "Add User with Valid Payload",
 			"url": "http://localhost:3000/users",
-			"time": 5,
+			"time": 238,
 			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
+				"code": 201,
+				"name": "Created"
 			},
 			"tests": {
-				"it should response 201 status code": false,
+				"it should response 201 status code": true,
 				"response Content-Type header should have application/json value": true,
 				"response body should be an object": true,
 				"response body should have correct property and value": false
 			},
 			"testPassFailCounts": {
 				"it should response 201 status code": {
-					"pass": 0,
-					"fail": 1
+					"pass": 1,
+					"fail": 0
 				},
 				"response Content-Type header should have application/json value": {
 					"pass": 1,
@@ -119,11 +119,11 @@
 				}
 			},
 			"times": [
-				5
+				238
 			],
 			"allTests": [
 				{
-					"it should response 201 status code": false,
+					"it should response 201 status code": true,
 					"response Content-Type header should have application/json value": true,
 					"response body should be an object": true,
 					"response body should have correct property and value": false
@@ -131,10 +131,10 @@
 			]
 		},
 		{
-			"id": "7c2e6223-b521-42e6-97c8-aaa1e3e33382",
+			"id": "1d92af12-2d00-4a60-ab97-5af9cb4cf701",
 			"name": "Get User by Id with Invalid Id",
 			"url": "http://localhost:3000/users/xxx",
-			"time": 49,
+			"time": 8,
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found"
@@ -154,7 +154,7 @@
 				}
 			},
 			"times": [
-				49
+				8
 			],
 			"allTests": [
 				{
@@ -164,10 +164,10 @@
 			]
 		},
 		{
-			"id": "3acdf514-70e2-40f2-892a-e2dfbd6266d8",
+			"id": "dcc2bcbb-4489-4507-a936-07e52716c724",
 			"name": "Get User by Id with Valid Id",
 			"url": "http://localhost:3000/users/",
-			"time": 2,
+			"time": 3,
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found"
@@ -187,7 +187,7 @@
 				}
 			},
 			"times": [
-				2
+				3
 			],
 			"allTests": [
 				{
@@ -197,28 +197,28 @@
 			]
 		},
 		{
-			"id": "946100e2-2d9d-4c01-8a8c-a231b3494168",
+			"id": "253e8d0e-adcb-42d9-8f7c-162db476286f",
 			"name": "[Setup] Login for Auth Token",
 			"url": "http://localhost:3000/authentications",
-			"time": 4,
+			"time": 174,
 			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
+				"code": 200,
+				"name": "OK"
 			},
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				4
+				174
 			],
 			"allTests": [
 				{}
 			]
 		},
 		{
-			"id": "788731e4-6bed-4958-a8d8-e67e65f17b78",
+			"id": "914a3dd3-8370-403e-b934-980c30684eda",
 			"name": "Add Company without Authentication",
 			"url": "http://localhost:3000/companies",
-			"time": 3,
+			"time": 4,
 			"responseCode": {
 				"code": 401,
 				"name": "Unauthorized"
@@ -248,7 +248,7 @@
 				}
 			},
 			"times": [
-				3
+				4
 			],
 			"allTests": [
 				{
@@ -260,7 +260,7 @@
 			]
 		},
 		{
-			"id": "b94929f7-0569-4f67-98f1-33df8213798b",
+			"id": "e745d4d6-1997-4925-be89-59bef2610052",
 			"name": "Update Company without Authentication",
 			"url": "http://localhost:3000/companies/xxx",
 			"time": 3,
@@ -305,10 +305,10 @@
 			]
 		},
 		{
-			"id": "4422ba59-5873-46cb-a3f2-139a89e749f4",
+			"id": "099e9313-882c-4e0e-93f9-3e06868fe366",
 			"name": "Delete Company without Authentication",
 			"url": "http://localhost:3000/companies/xxx",
-			"time": 2,
+			"time": 3,
 			"responseCode": {
 				"code": 401,
 				"name": "Unauthorized"
@@ -338,7 +338,7 @@
 				}
 			},
 			"times": [
-				2
+				3
 			],
 			"allTests": [
 				{
@@ -350,10 +350,10 @@
 			]
 		},
 		{
-			"id": "34b67bc8-3c6a-4c54-b21f-a278a601e350",
+			"id": "e8ea7ca1-785e-4801-a728-29c4f0a4b9f7",
 			"name": "Add Company with Invalid Payload",
 			"url": "http://localhost:3000/companies",
-			"time": 3,
+			"time": 5,
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request"
@@ -364,8 +364,8 @@
 			},
 			"testPassFailCounts": {
 				"it should response 400 status code": {
-					"pass": 3,
-					"fail": 0
+					"pass": 2,
+					"fail": 1
 				},
 				"response body should have correct property and value": {
 					"pass": 2,
@@ -373,9 +373,9 @@
 				}
 			},
 			"times": [
-				7,
-				7,
-				3
+				5,
+				11,
+				5
 			],
 			"allTests": [
 				{
@@ -383,7 +383,7 @@
 					"response body should have correct property and value": true
 				},
 				{
-					"it should response 400 status code": true,
+					"it should response 400 status code": false,
 					"response body should have correct property and value": false
 				},
 				{
@@ -393,22 +393,22 @@
 			]
 		},
 		{
-			"id": "c52fa226-0e46-4898-8199-2c82af79171d",
+			"id": "1ef5f7f6-b47b-45d2-bd9e-30f567746e98",
 			"name": "Add Company with Valid Payload",
 			"url": "http://localhost:3000/companies",
-			"time": 33,
+			"time": 15,
 			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
+				"code": 201,
+				"name": "Created"
 			},
 			"tests": {
-				"it should response 201 status code": false,
+				"it should response 201 status code": true,
 				"response body should have correct property and value": false
 			},
 			"testPassFailCounts": {
 				"it should response 201 status code": {
-					"pass": 0,
-					"fail": 1
+					"pass": 1,
+					"fail": 0
 				},
 				"response body should have correct property and value": {
 					"pass": 0,
@@ -416,20 +416,86 @@
 				}
 			},
 			"times": [
-				33
+				15
 			],
 			"allTests": [
 				{
-					"it should response 201 status code": false,
+					"it should response 201 status code": true,
 					"response body should have correct property and value": false
 				}
 			]
 		},
 		{
-			"id": "3c52d396-882d-4fa7-b553-be197abb5e61",
+			"id": "ec2eb6d9-b2bf-45c3-aa5d-dca01fd20bcb",
 			"name": "Get All Companies",
 			"url": "http://localhost:3000/companies",
-			"time": 35,
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "b11ca184-c942-4e9b-8d2a-2562a7e59448",
+			"name": "Get Company by Id with Invalid Id",
+			"url": "http://localhost:3000/companies/xxx",
+			"time": 5,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "4871a835-2f2a-43b9-8abc-3d36c24149ea",
+			"name": "Get Company by Id with Valid Id",
+			"url": "http://localhost:3000/companies/",
+			"time": 5,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -449,7 +515,7 @@
 				}
 			},
 			"times": [
-				35
+				5
 			],
 			"allTests": [
 				{
@@ -459,10 +525,308 @@
 			]
 		},
 		{
-			"id": "d3962280-70c8-4c31-8b1d-5c4673b845ae",
-			"name": "Get Company by Id with Invalid Id",
+			"id": "b12c1fee-a304-4ed0-b74f-ed600c68fdac",
+			"name": "Update Company with Invalid Id",
 			"url": "http://localhost:3000/companies/xxx",
 			"time": 7,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true
+				}
+			]
+		},
+		{
+			"id": "f214abf0-6086-40c2-af09-a9cf3b6c2ce5",
+			"name": "Update Company with Valid Id",
+			"url": "http://localhost:3000/companies/",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 200 status code": false,
+				"response body should have correct property and value": false
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response body should have correct property and value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": false,
+					"response body should have correct property and value": false
+				}
+			]
+		},
+		{
+			"id": "40ff85a7-40c1-48ae-8ebb-e722bb9d98bf",
+			"name": "Delete Company with Invalid Id",
+			"url": "http://localhost:3000/companies/xxx",
+			"time": 5,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true
+				}
+			]
+		},
+		{
+			"id": "f7555623-29d1-463f-ae33-a9e168ebaa7d",
+			"name": "Delete Company with Valid Id",
+			"url": "http://localhost:3000/companies/",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 200 status code": false,
+				"response body should have correct property and value": false
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response body should have correct property and value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": false,
+					"response body should have correct property and value": false
+				}
+			]
+		},
+		{
+			"id": "d91ab411-c360-4dfe-92b6-0029ab615a94",
+			"name": "Add Category without Authentication",
+			"url": "http://localhost:3000/categories",
+			"time": 3,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should be an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should be an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "15c3dcf5-c3f0-4232-b381-b40700cbcc1e",
+			"name": "Update Category without Authentication",
+			"url": "http://localhost:3000/categories/xxx",
+			"time": 3,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should be an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should be an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "3b4157aa-5f70-4515-94bd-dc3a08ad7341",
+			"name": "Delete Category without Authentication",
+			"url": "http://localhost:3000/categories/xxx",
+			"time": 3,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should be an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should be an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "da27b58f-50ef-407c-a335-f00f78d23088",
+			"name": "Add Category with Invalid Payload",
+			"url": "http://localhost:3000/categories",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 3,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				5,
+				5,
+				4
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response body should have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response body should have correct property and value": true
+				},
+				{
+					"it should response 400 status code": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "66f5a9ba-a58a-4430-ba15-d036b4a4459a",
+			"name": "Get Category by Id with Invalid Id",
+			"url": "http://localhost:3000/categories/xxx",
+			"time": 10,
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found"
@@ -473,6 +837,126 @@
 			},
 			"testPassFailCounts": {
 				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "5896b89d-9c04-4b48-8548-88af355759ba",
+			"name": "Update Category with Invalid Id",
+			"url": "http://localhost:3000/categories/xxx",
+			"time": 7,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true
+				}
+			]
+		},
+		{
+			"id": "b70f54f9-159c-4622-8b91-ad063d5fa0cc",
+			"name": "Delete Category with Invalid Id",
+			"url": "http://localhost:3000/categories/xxx",
+			"time": 6,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true
+				}
+			]
+		},
+		{
+			"id": "cf475536-5759-4bca-8240-d4b64fe1ab7f",
+			"name": "Add Category with Valid Payload",
+			"url": "http://localhost:3000/categories",
+			"time": 18,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"it should response 201 status code": true,
+				"response body should have correct property and value": false
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": true,
+					"response body should have correct property and value": false
+				}
+			]
+		},
+		{
+			"id": "ddcf16eb-a6e8-429b-b87c-ddb94bc464ac",
+			"name": "Get All Categories",
+			"url": "http://localhost:3000/categories",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
 					"pass": 1,
 					"fail": 0
 				},
@@ -486,16 +970,16 @@
 			],
 			"allTests": [
 				{
-					"it should response 404 status code": true,
+					"it should response 200 status code": true,
 					"response body should have correct property and value": true
 				}
 			]
 		},
 		{
-			"id": "3504a787-db6d-468e-a452-7f0ca65f10ed",
-			"name": "Get Company by Id with Valid Id",
-			"url": "http://localhost:3000/companies/",
-			"time": 3,
+			"id": "87b4fe25-8ec1-445a-b634-c41449656065",
+			"name": "Get Category by Id",
+			"url": "http://localhost:3000/categories/",
+			"time": 6,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -515,7 +999,7 @@
 				}
 			},
 			"times": [
-				3
+				6
 			],
 			"allTests": [
 				{
@@ -525,318 +1009,210 @@
 			]
 		},
 		{
-			"id": "34435c84-58e7-4e54-8057-544f44d8ef6c",
-			"name": "Update Company with Invalid Id",
-			"url": "http://localhost:3000/companies/xxx",
-			"time": 3,
+			"id": "74b9fd85-b008-438a-aabb-be331015d7ba",
+			"name": "Update Category",
+			"url": "http://localhost:3000/categories/",
+			"time": 5,
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found"
 			},
 			"tests": {
-				"it should response 404 status code": true
-			},
-			"testPassFailCounts": {
-				"it should response 404 status code": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 404 status code": true
-				}
-			]
-		},
-		{
-			"id": "5c1dc0a0-7083-4091-967a-1531c3d91d37",
-			"name": "Update Company with Valid Id",
-			"url": "http://localhost:3000/companies/",
-			"time": 2,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 200 status code": false,
-				"response body should have correct property and value": false
+				"it should response 200 status code": false
 			},
 			"testPassFailCounts": {
 				"it should response 200 status code": {
 					"pass": 0,
 					"fail": 1
-				},
-				"response body should have correct property and value": {
-					"pass": 0,
-					"fail": 1
 				}
 			},
 			"times": [
-				2
+				5
 			],
 			"allTests": [
 				{
-					"it should response 200 status code": false,
-					"response body should have correct property and value": false
+					"it should response 200 status code": false
 				}
 			]
 		},
 		{
-			"id": "1539eead-9644-43dd-97fa-727806c3aa64",
-			"name": "Delete Company with Invalid Id",
-			"url": "http://localhost:3000/companies/xxx",
-			"time": 3,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 404 status code": true
-			},
-			"testPassFailCounts": {
-				"it should response 404 status code": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 404 status code": true
-				}
-			]
-		},
-		{
-			"id": "7b77bd18-5a6d-480d-b376-ad0f81eb9e46",
-			"name": "Delete Company with Valid Id",
-			"url": "http://localhost:3000/companies/",
-			"time": 1,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 200 status code": false,
-				"response body should have correct property and value": false
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
-				},
-				"response body should have correct property and value": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				1
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": false,
-					"response body should have correct property and value": false
-				}
-			]
-		},
-		{
-			"id": "0341bd42-64b5-4868-ae00-54dd7e4754a5",
-			"name": "Add Category without Authentication",
-			"url": "http://localhost:3000/categories",
-			"time": 2,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 401 status code": true,
-				"response Content-Type header should have application/json value": true,
-				"response body should be an object": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 401 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should be an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 401 status code": true,
-					"response Content-Type header should have application/json value": true,
-					"response body should be an object": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "96dd0bc7-49da-43ae-bcb3-a5432f98a54b",
-			"name": "Update Category without Authentication",
-			"url": "http://localhost:3000/categories/xxx",
-			"time": 2,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 401 status code": true,
-				"response Content-Type header should have application/json value": true,
-				"response body should be an object": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 401 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should be an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 401 status code": true,
-					"response Content-Type header should have application/json value": true,
-					"response body should be an object": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "a5b82a8e-c725-41e6-938e-c92d54f2ef0b",
-			"name": "Delete Category without Authentication",
-			"url": "http://localhost:3000/categories/xxx",
-			"time": 2,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 401 status code": true,
-				"response Content-Type header should have application/json value": true,
-				"response body should be an object": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 401 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should be an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 401 status code": true,
-					"response Content-Type header should have application/json value": true,
-					"response body should be an object": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "2be8ce41-a5c9-4a60-85ee-f276c335c33d",
-			"name": "Add Category with Invalid Payload",
-			"url": "http://localhost:3000/categories",
-			"time": 3,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
-			},
-			"tests": {
-				"it should response 400 status code": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 400 status code": {
-					"pass": 3,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 3,
-					"fail": 0
-				}
-			},
-			"times": [
-				2,
-				2,
-				3
-			],
-			"allTests": [
-				{
-					"it should response 400 status code": true,
-					"response body should have correct property and value": true
-				},
-				{
-					"it should response 400 status code": true,
-					"response body should have correct property and value": true
-				},
-				{
-					"it should response 400 status code": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "27e629c3-1008-494f-aa21-4f3ea984b634",
-			"name": "Get Category by Id with Invalid Id",
-			"url": "http://localhost:3000/categories/xxx",
+			"id": "c25575d6-f23b-4902-9d6b-dfc748f0333f",
+			"name": "Delete Category",
+			"url": "http://localhost:3000/categories/",
 			"time": 4,
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found"
 			},
 			"tests": {
-				"it should response 404 status code": true,
+				"it should response 200 status code": false
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": false
+				}
+			]
+		},
+		{
+			"id": "47bb0145-7665-4b46-b289-3f5fee7e978f",
+			"name": "[Setup] - Create Company for Jobs",
+			"url": "http://localhost:3000/companies",
+			"time": 15,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				15
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4dda1f78-792c-4934-936a-1360c01b3685",
+			"name": "[Setup] - Create Category for Jobs",
+			"url": "http://localhost:3000/categories",
+			"time": 8,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "737788e9-42d1-434f-bc79-af0a1c64131e",
+			"name": "Add Job without Authentication",
+			"url": "http://localhost:3000/jobs",
+			"time": 5,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should be an object": true,
 				"response body should have correct property and value": true
 			},
 			"testPassFailCounts": {
-				"it should response 404 status code": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should be an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "2bb14fc4-e69b-43e6-82ac-34bf095bc406",
+			"name": "Update Job without Authentication",
+			"url": "http://localhost:3000/jobs/xxx",
+			"time": 5,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should be an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should be an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "4f2d5fdd-d7e5-4707-a7cd-44e82e8029b4",
+			"name": "Delete Job without Authentication",
+			"url": "http://localhost:3000/jobs/xxx",
+			"time": 4,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should be an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should be an object": {
 					"pass": 1,
 					"fail": 0
 				},
@@ -850,292 +1226,6 @@
 			],
 			"allTests": [
 				{
-					"it should response 404 status code": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "c26d2c04-5935-497c-9377-eea65c1bda86",
-			"name": "Update Category with Invalid Id",
-			"url": "http://localhost:3000/categories/xxx",
-			"time": 3,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 404 status code": true
-			},
-			"testPassFailCounts": {
-				"it should response 404 status code": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 404 status code": true
-				}
-			]
-		},
-		{
-			"id": "881834c4-1210-47bb-9eaa-8198c2b38b91",
-			"name": "Delete Category with Invalid Id",
-			"url": "http://localhost:3000/categories/xxx",
-			"time": 3,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 404 status code": true
-			},
-			"testPassFailCounts": {
-				"it should response 404 status code": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 404 status code": true
-				}
-			]
-		},
-		{
-			"id": "e34cbf41-34ab-4ad5-acc8-577728bb3557",
-			"name": "Add Category with Valid Payload",
-			"url": "http://localhost:3000/categories",
-			"time": 20,
-			"responseCode": {
-				"code": 500,
-				"name": "Internal Server Error"
-			},
-			"tests": {
-				"it should response 201 status code": false,
-				"response body should have correct property and value": false
-			},
-			"testPassFailCounts": {
-				"it should response 201 status code": {
-					"pass": 0,
-					"fail": 1
-				},
-				"response body should have correct property and value": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				20
-			],
-			"allTests": [
-				{
-					"it should response 201 status code": false,
-					"response body should have correct property and value": false
-				}
-			]
-		},
-		{
-			"id": "f86488b6-fc30-4344-8f2f-18ed5efced5f",
-			"name": "Get All Categories",
-			"url": "http://localhost:3000/categories",
-			"time": 56,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"it should response 200 status code": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				56
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "64225ce6-1e3e-454c-af51-06720fffe076",
-			"name": "Get Category by Id",
-			"url": "http://localhost:3000/categories/",
-			"time": 3,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"it should response 200 status code": true,
-				"response body should have correct property and value": false
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": true,
-					"response body should have correct property and value": false
-				}
-			]
-		},
-		{
-			"id": "ea13e574-91a5-4c06-9bb1-01bf70405dcc",
-			"name": "Update Category",
-			"url": "http://localhost:3000/categories/",
-			"time": 2,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 200 status code": false
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": false
-				}
-			]
-		},
-		{
-			"id": "064c0014-8f77-416a-98d2-16dd22606a9e",
-			"name": "Delete Category",
-			"url": "http://localhost:3000/categories/",
-			"time": 2,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 200 status code": false
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": false
-				}
-			]
-		},
-		{
-			"id": "c9747cfc-460c-4e23-a512-fc9120e511ee",
-			"name": "[Setup] - Create Company for Jobs",
-			"url": "http://localhost:3000/companies",
-			"time": 5,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				5
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "29ed4fc5-d54a-4ffe-9139-88c75fe21432",
-			"name": "[Setup] - Create Category for Jobs",
-			"url": "http://localhost:3000/categories",
-			"time": 53,
-			"responseCode": {
-				"code": 500,
-				"name": "Internal Server Error"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				53
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "589c57ff-c0d1-409e-9961-bee4409ff136",
-			"name": "Add Job without Authentication",
-			"url": "http://localhost:3000/jobs",
-			"time": 2,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 401 status code": true,
-				"response Content-Type header should have application/json value": true,
-				"response body should be an object": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 401 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should be an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
 					"it should response 401 status code": true,
 					"response Content-Type header should have application/json value": true,
 					"response body should be an object": true,
@@ -1144,100 +1234,10 @@
 			]
 		},
 		{
-			"id": "73edb9e9-e9ae-4a8d-8a2e-ac0dd542ca8f",
-			"name": "Update Job without Authentication",
-			"url": "http://localhost:3000/jobs/xxx",
-			"time": 2,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 401 status code": true,
-				"response Content-Type header should have application/json value": true,
-				"response body should be an object": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 401 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should be an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 401 status code": true,
-					"response Content-Type header should have application/json value": true,
-					"response body should be an object": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "31294a65-cd2d-4f58-8ba2-41f042c9324c",
-			"name": "Delete Job without Authentication",
-			"url": "http://localhost:3000/jobs/xxx",
-			"time": 2,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 401 status code": true,
-				"response Content-Type header should have application/json value": true,
-				"response body should be an object": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 401 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should be an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 401 status code": true,
-					"response Content-Type header should have application/json value": true,
-					"response body should be an object": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "82735776-927a-4199-83c5-7fc7c540fcaf",
+			"id": "fbebeb8a-d77b-4a05-9e16-cb2d3fc720b7",
 			"name": "Add Job with Invalid Payload",
 			"url": "http://localhost:3000/jobs",
-			"time": 2,
+			"time": 5,
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request"
@@ -1252,9 +1252,9 @@
 				}
 			},
 			"times": [
-				2,
-				3,
-				2
+				5,
+				6,
+				5
 			],
 			"allTests": [
 				{
@@ -1269,10 +1269,10 @@
 			]
 		},
 		{
-			"id": "f5e40489-6c50-4e69-a9d9-32cc32a2a8ac",
+			"id": "4090c868-efce-4d6f-90c5-2d592fc47c4d",
 			"name": "Add Job with Valid Payload",
 			"url": "http://localhost:3000/jobs",
-			"time": 3,
+			"time": 7,
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request"
@@ -1292,7 +1292,7 @@
 				}
 			},
 			"times": [
-				3
+				7
 			],
 			"allTests": [
 				{
@@ -1302,10 +1302,10 @@
 			]
 		},
 		{
-			"id": "e2c24aaa-29ae-45d0-a318-d2a8b0fa8a16",
+			"id": "0f78c612-67cb-4be7-a82a-a13e1070153c",
 			"name": "Get All Jobs",
 			"url": "http://localhost:3000/jobs",
-			"time": 36,
+			"time": 9,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -1325,7 +1325,7 @@
 				}
 			},
 			"times": [
-				36
+				9
 			],
 			"allTests": [
 				{
@@ -1335,10 +1335,10 @@
 			]
 		},
 		{
-			"id": "f816ed97-b984-4c85-9971-52183901afdb",
+			"id": "81f33187-be75-4f1d-98a3-b708647ebc18",
 			"name": "[Optional] Search Jobs by Title",
 			"url": "http://localhost:3000/jobs?title=Backend",
-			"time": 3,
+			"time": 7,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -1373,7 +1373,7 @@
 				}
 			},
 			"times": [
-				3
+				7
 			],
 			"allTests": [
 				{
@@ -1386,10 +1386,10 @@
 			]
 		},
 		{
-			"id": "327d4037-84ec-4bf0-bcb8-bec25ba342e3",
+			"id": "84f8aa86-7209-462d-b499-c8f90d82ea38",
 			"name": "[Optional] Search Jobs by Company Name",
 			"url": "http://localhost:3000/jobs?company-name=Tech Corp",
-			"time": 5,
+			"time": 6,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -1424,7 +1424,7 @@
 				}
 			},
 			"times": [
-				5
+				6
 			],
 			"allTests": [
 				{
@@ -1437,10 +1437,10 @@
 			]
 		},
 		{
-			"id": "6606031c-783a-4847-b48e-f7ed06e9f9c8",
+			"id": "3176b5b1-2942-4a3c-815e-0ea3f0c03f4e",
 			"name": "[Optional] Search Jobs by Title and Company Name",
 			"url": "http://localhost:3000/jobs?title=Developer&company-name=Tech",
-			"time": 3,
+			"time": 6,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -1475,7 +1475,7 @@
 				}
 			},
 			"times": [
-				3
+				6
 			],
 			"allTests": [
 				{
@@ -1488,10 +1488,10 @@
 			]
 		},
 		{
-			"id": "4412f122-1c35-4b23-a0c3-5df6570a421f",
+			"id": "1305d127-7b2e-47c3-af88-762cb0895036",
 			"name": "[Optional] Search Jobs with Non-Existent Title",
 			"url": "http://localhost:3000/jobs?title=NonExistentJobTitle12345",
-			"time": 3,
+			"time": 4,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -1526,7 +1526,7 @@
 				}
 			},
 			"times": [
-				3
+				4
 			],
 			"allTests": [
 				{
@@ -1539,10 +1539,10 @@
 			]
 		},
 		{
-			"id": "a982a258-427d-41dc-8385-47d0dcf60efe",
+			"id": "6c3fbfbb-8b5a-4797-88b0-f6ca05dcb4ee",
 			"name": "[Optional] Search Jobs with Empty Query Parameters",
 			"url": "http://localhost:3000/jobs?title=&company-name=",
-			"time": 3,
+			"time": 6,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -1577,7 +1577,7 @@
 				}
 			},
 			"times": [
-				3
+				6
 			],
 			"allTests": [
 				{
@@ -1590,10 +1590,10 @@
 			]
 		},
 		{
-			"id": "baef58c4-e0aa-4a45-b19c-baeda3914d54",
+			"id": "43924267-3368-4e7f-8096-508bdaabb895",
 			"name": "Get Jobs by Company Id with Invalid Id",
 			"url": "http://localhost:3000/jobs/company/xxx",
-			"time": 3,
+			"time": 7,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -1613,7 +1613,7 @@
 				}
 			},
 			"times": [
-				3
+				7
 			],
 			"allTests": [
 				{
@@ -1623,408 +1623,9 @@
 			]
 		},
 		{
-			"id": "fc86dab7-c8c4-4de0-b835-b41225ab05ae",
+			"id": "1e25db0c-18e9-46a0-a9af-df8bf76e95ba",
 			"name": "Get Jobs by Company Id with Valid Id",
 			"url": "http://localhost:3000/jobs/company/null",
-			"time": 3,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"it should response 200 status code": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "3045050e-aa58-47e3-a8ec-c986fd741743",
-			"name": "Get Jobs by Category Id with Invalid Id",
-			"url": "http://localhost:3000/jobs/category/xxx",
-			"time": 3,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"it should response 200 status code": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "188f0174-30cf-401d-868d-8f5a8922b02a",
-			"name": "Get Jobs by Category Id with Valid Id",
-			"url": "http://localhost:3000/jobs/category/null",
-			"time": 3,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"it should response 200 status code": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "f70c7466-88ea-4efb-9d18-35309aac3e2c",
-			"name": "Get Job by Id with Invalid Id",
-			"url": "http://localhost:3000/jobs/xxx",
-			"time": 3,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 404 status code": true
-			},
-			"testPassFailCounts": {
-				"it should response 404 status code": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 404 status code": true
-				}
-			]
-		},
-		{
-			"id": "945cab14-52c2-4abc-bdc6-408ecdd5207e",
-			"name": "Get Job by Id with Valid Id",
-			"url": "http://localhost:3000/jobs/",
-			"time": 3,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"it should response 200 status code": true,
-				"response body should have correct property and value": false
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": true,
-					"response body should have correct property and value": false
-				}
-			]
-		},
-		{
-			"id": "f565709e-9cfc-45ab-88b1-4928019c9e0f",
-			"name": "Update Job with Valid Id",
-			"url": "http://localhost:3000/jobs/",
-			"time": 2,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 200 status code": false
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": false
-				}
-			]
-		},
-		{
-			"id": "f2f24b86-9a2e-4edd-90df-d283621de86e",
-			"name": "Delete Job with Valid Id",
-			"url": "http://localhost:3000/jobs/",
-			"time": 3,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 200 status code": false
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": false
-				}
-			]
-		},
-		{
-			"id": "db6e5113-b59c-4353-86be-ea503d0de2ce",
-			"name": "[Setup] - Create Job for Application",
-			"url": "http://localhost:3000/jobs",
-			"time": 3,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				3
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "062107c8-8483-4d2a-89d9-10ddb838ade6",
-			"name": "Apply for Job without Authentication",
-			"url": "http://localhost:3000/applications",
-			"time": 2,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 401 status code": true,
-				"response Content-Type header should have application/json value": true,
-				"response body should be an object": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 401 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should be an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 401 status code": true,
-					"response Content-Type header should have application/json value": true,
-					"response body should be an object": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "fd0b9893-a282-4a70-beaf-226008ae7b8c",
-			"name": "Get All Applications without Authentication",
-			"url": "http://localhost:3000/applications",
-			"time": 2,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 401 status code": true,
-				"response Content-Type header should have application/json value": true,
-				"response body should be an object": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 401 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should be an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 401 status code": true,
-					"response Content-Type header should have application/json value": true,
-					"response body should be an object": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "c0418516-4d48-4c51-8458-6454b29e6a87",
-			"name": "Get Application by Id without Authentication",
-			"url": "http://localhost:3000/applications/xxx",
-			"time": 2,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 401 status code": true,
-				"response Content-Type header should have application/json value": true,
-				"response body should be an object": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 401 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should be an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 401 status code": true,
-					"response Content-Type header should have application/json value": true,
-					"response body should be an object": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "16739929-ad23-4907-9c9a-b555019395e4",
-			"name": "Apply for Job",
-			"url": "http://localhost:3000/applications",
-			"time": 2,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
-			},
-			"tests": {
-				"it should response 201 status code": false,
-				"response body should have correct property and value": false
-			},
-			"testPassFailCounts": {
-				"it should response 201 status code": {
-					"pass": 0,
-					"fail": 1
-				},
-				"response body should have correct property and value": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 201 status code": false,
-					"response body should have correct property and value": false
-				}
-			]
-		},
-		{
-			"id": "69184888-b37c-44f5-9392-5bcc2362d940",
-			"name": "Get All Applications",
-			"url": "http://localhost:3000/applications",
 			"time": 4,
 			"responseCode": {
 				"code": 200,
@@ -2055,7 +1656,406 @@
 			]
 		},
 		{
-			"id": "f8515d8d-0ade-4be6-8272-d77442c8ee20",
+			"id": "fe164c50-e02e-433e-b995-54e13fc4e4b8",
+			"name": "Get Jobs by Category Id with Invalid Id",
+			"url": "http://localhost:3000/jobs/category/xxx",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "81fdf677-d296-45ea-9174-a95d25ce8ea8",
+			"name": "Get Jobs by Category Id with Valid Id",
+			"url": "http://localhost:3000/jobs/category/null",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "bad7517c-afd1-4a6e-a80a-8a9b858c9048",
+			"name": "Get Job by Id with Invalid Id",
+			"url": "http://localhost:3000/jobs/xxx",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true
+				}
+			]
+		},
+		{
+			"id": "82c217e5-ecf7-4be9-89f4-47b3d583fb42",
+			"name": "Get Job by Id with Valid Id",
+			"url": "http://localhost:3000/jobs/",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response body should have correct property and value": false
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response body should have correct property and value": false
+				}
+			]
+		},
+		{
+			"id": "e40618da-ea37-4d8c-b351-1c4aac36bf79",
+			"name": "Update Job with Valid Id",
+			"url": "http://localhost:3000/jobs/",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 200 status code": false
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": false
+				}
+			]
+		},
+		{
+			"id": "e8ee9e2d-ccb7-4a93-a967-9939dfc633c3",
+			"name": "Delete Job with Valid Id",
+			"url": "http://localhost:3000/jobs/",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 200 status code": false
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": false
+				}
+			]
+		},
+		{
+			"id": "d8bc94f7-0f5a-42d1-bd02-e0e6cdcbbcaf",
+			"name": "[Setup] - Create Job for Application",
+			"url": "http://localhost:3000/jobs",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1b1bfa07-c1cb-40fd-9003-47ddd53364d1",
+			"name": "Apply for Job without Authentication",
+			"url": "http://localhost:3000/applications",
+			"time": 3,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should be an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should be an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "175f9733-72db-4da5-acf8-ddcbf78cb96f",
+			"name": "Get All Applications without Authentication",
+			"url": "http://localhost:3000/applications",
+			"time": 3,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should be an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should be an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "0108d124-748f-4905-9bdf-78b6cbf1a6fd",
+			"name": "Get Application by Id without Authentication",
+			"url": "http://localhost:3000/applications/xxx",
+			"time": 3,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should be an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should be an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "96e43270-2ffb-4692-b262-15505872d139",
+			"name": "Apply for Job",
+			"url": "http://localhost:3000/applications",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 201 status code": false,
+				"response body should have correct property and value": false
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response body should have correct property and value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": false,
+					"response body should have correct property and value": false
+				}
+			]
+		},
+		{
+			"id": "b55be3b9-ae4f-455a-932a-920654961823",
+			"name": "Get All Applications",
+			"url": "http://localhost:3000/applications",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "2f2499bb-9657-4a62-bd62-7d862d0e79bd",
 			"name": "Get Application by Id",
 			"url": "http://localhost:3000/applications/",
 			"time": 4,
@@ -2088,447 +2088,9 @@
 			]
 		},
 		{
-			"id": "400929ad-9463-4327-be6d-514fe10dfceb",
+			"id": "1d14235d-f649-4f56-8a48-75c0312e64b3",
 			"name": "Get Applications by User Id with Invalid Id",
 			"url": "http://localhost:3000/applications/user/xxx",
-			"time": 3,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"it should response 200 status code": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "d03ef17b-bc52-4482-97bf-b00390122f02",
-			"name": "Get Applications by User Id with Valid Id",
-			"url": "http://localhost:3000/applications/user/",
-			"time": 3,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 200 status code": false,
-				"response body should have correct property and value": false
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
-				},
-				"response body should have correct property and value": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": false,
-					"response body should have correct property and value": false
-				}
-			]
-		},
-		{
-			"id": "cbf2e0a7-95f2-45cf-bfa8-7917c2ee9668",
-			"name": "Get Applications by Job Id with Invalid Id",
-			"url": "http://localhost:3000/applications/job/xxx",
-			"time": 3,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"it should response 200 status code": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "9547b36e-501b-420c-82cf-c0114640cb5b",
-			"name": "Get Applications by Job Id with Valid Id",
-			"url": "http://localhost:3000/applications/job/",
-			"time": 3,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 200 status code": false,
-				"response body should have correct property and value": false
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
-				},
-				"response body should have correct property and value": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": false,
-					"response body should have correct property and value": false
-				}
-			]
-		},
-		{
-			"id": "a6b7e01c-796b-4729-8542-4723875c7800",
-			"name": "Get Applications by User Id without Authentication",
-			"url": "http://localhost:3000/applications/user/xxx",
-			"time": 2,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 401 status code": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 401 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 401 status code": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "80eabc87-d907-4d2c-8a54-a4a4cc3b3896",
-			"name": "Get Applications by Job Id without Authentication",
-			"url": "http://localhost:3000/applications/job/xxx",
-			"time": 2,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 401 status code": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 401 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 401 status code": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "d93ec5ec-1ee0-4bc1-8733-171bddb33f6b",
-			"name": "Update Application Status",
-			"url": "http://localhost:3000/applications/",
-			"time": 2,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 200 status code": false
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": false
-				}
-			]
-		},
-		{
-			"id": "a482e75a-bc63-4195-9dca-5a91017cf982",
-			"name": "Delete Application",
-			"url": "http://localhost:3000/applications/",
-			"time": 2,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 200 status code": false
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": false
-				}
-			]
-		},
-		{
-			"id": "c7f790fb-60f3-4a16-a7e6-c000c4afc1dd",
-			"name": "[Setup] - Create Job for Bookmark",
-			"url": "http://localhost:3000/jobs",
-			"time": 3,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				3
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "646036eb-2aa9-482c-b91f-272a12dbef82",
-			"name": "Add Bookmark without Authentication",
-			"url": "http://localhost:3000/jobs//bookmark",
-			"time": 2,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 401 status code": false,
-				"response Content-Type header should have application/json value": true,
-				"response body should be an object": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 401 status code": {
-					"pass": 0,
-					"fail": 1
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should be an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 401 status code": false,
-					"response Content-Type header should have application/json value": true,
-					"response body should be an object": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "490377c4-190a-49fe-ad32-2431969ca6c5",
-			"name": "Get All User Bookmarks without Authentication",
-			"url": "http://localhost:3000/bookmarks",
-			"time": 2,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 401 status code": true,
-				"response Content-Type header should have application/json value": true,
-				"response body should be an object": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 401 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should be an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 401 status code": true,
-					"response Content-Type header should have application/json value": true,
-					"response body should be an object": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "45e40b76-7431-4a4f-a2df-0964bd8139bb",
-			"name": "Delete Bookmark without Authentication",
-			"url": "http://localhost:3000/jobs//bookmark",
-			"time": 2,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 401 status code": false,
-				"response Content-Type header should have application/json value": true,
-				"response body should be an object": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 401 status code": {
-					"pass": 0,
-					"fail": 1
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should be an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 401 status code": false,
-					"response Content-Type header should have application/json value": true,
-					"response body should be an object": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "1255d4d3-5f94-4233-adc4-81af55187d5a",
-			"name": "Add Bookmark",
-			"url": "http://localhost:3000/jobs//bookmark",
-			"time": 2,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 201 status code": false,
-				"response body should have correct property and value": false
-			},
-			"testPassFailCounts": {
-				"it should response 201 status code": {
-					"pass": 0,
-					"fail": 1
-				},
-				"response body should have correct property and value": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 201 status code": false,
-					"response body should have correct property and value": false
-				}
-			]
-		},
-		{
-			"id": "49e2ab6e-5f74-4b65-8901-a8f068a44820",
-			"name": "Get All User Bookmarks",
-			"url": "http://localhost:3000/bookmarks",
 			"time": 5,
 			"responseCode": {
 				"code": 200,
@@ -2559,43 +2121,10 @@
 			]
 		},
 		{
-			"id": "134ab4f4-7de2-4641-bd6a-8970d045f436",
-			"name": "Get Bookmark by Id with Invalid Id",
-			"url": "http://localhost:3000/jobs//bookmark/xxx",
-			"time": 2,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"it should response 404 status code": true,
-				"response body should have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 404 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 404 status code": true,
-					"response body should have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "d26453ff-cd9f-43f4-8424-d37a95871add",
-			"name": "Get Bookmark by Id with Valid Id",
-			"url": "http://localhost:3000/jobs//bookmark/",
-			"time": 2,
+			"id": "2a18d341-340f-442f-a144-ff365b713d82",
+			"name": "Get Applications by User Id with Valid Id",
+			"url": "http://localhost:3000/applications/user/",
+			"time": 6,
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found"
@@ -2615,7 +2144,7 @@
 				}
 			},
 			"times": [
-				2
+				6
 			],
 			"allTests": [
 				{
@@ -2625,9 +2154,168 @@
 			]
 		},
 		{
-			"id": "d809f26e-5f50-4ee8-92a5-9264a74abe5b",
-			"name": "Delete Bookmark",
-			"url": "http://localhost:3000/jobs//bookmark",
+			"id": "7de37afd-7462-4a31-906b-c0aeec3347f1",
+			"name": "Get Applications by Job Id with Invalid Id",
+			"url": "http://localhost:3000/applications/job/xxx",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "a6ab6f41-25ae-4d9f-88de-18fa2d8fe75e",
+			"name": "Get Applications by Job Id with Valid Id",
+			"url": "http://localhost:3000/applications/job/",
+			"time": 5,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 200 status code": false,
+				"response body should have correct property and value": false
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response body should have correct property and value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": false,
+					"response body should have correct property and value": false
+				}
+			]
+		},
+		{
+			"id": "03c55128-1ae4-47b0-a724-17697f81ba95",
+			"name": "Get Applications by User Id without Authentication",
+			"url": "http://localhost:3000/applications/user/xxx",
+			"time": 3,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "74b3b8a2-719f-452d-8654-b53fb175075f",
+			"name": "Get Applications by Job Id without Authentication",
+			"url": "http://localhost:3000/applications/job/xxx",
+			"time": 3,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "0013b947-1c8f-49f0-9d53-7b8df2e26573",
+			"name": "Update Application Status",
+			"url": "http://localhost:3000/applications/",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 200 status code": false
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": false
+				}
+			]
+		},
+		{
+			"id": "181dea9d-6dfb-4da1-ac5c-88e0034f1815",
+			"name": "Delete Application",
+			"url": "http://localhost:3000/applications/",
 			"time": 2,
 			"responseCode": {
 				"code": 404,
@@ -2652,46 +2340,358 @@
 			]
 		},
 		{
-			"id": "0945aac9-42c2-43f3-823f-5bbbbffab425",
+			"id": "0a13db9c-5e3b-466a-a22b-ca215122754e",
+			"name": "[Setup] - Create Job for Bookmark",
+			"url": "http://localhost:3000/jobs",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ed4eb5e6-c52e-465a-b310-a8a69e225cff",
+			"name": "Add Bookmark without Authentication",
+			"url": "http://localhost:3000/jobs//bookmark",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 401 status code": false,
+				"response Content-Type header should have application/json value": true,
+				"response body should be an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": false,
+					"response Content-Type header should have application/json value": true,
+					"response body should be an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "2c782e0c-4a61-4629-a2f8-33b75c9ca4e4",
+			"name": "Get All User Bookmarks without Authentication",
+			"url": "http://localhost:3000/bookmarks",
+			"time": 3,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 401 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should be an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should be an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "9bf1e806-0205-4907-bdcc-5d0cb001faf2",
+			"name": "Delete Bookmark without Authentication",
+			"url": "http://localhost:3000/jobs//bookmark",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 401 status code": false,
+				"response Content-Type header should have application/json value": true,
+				"response body should be an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 401 status code": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 401 status code": false,
+					"response Content-Type header should have application/json value": true,
+					"response body should be an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "4445ac5b-8af5-4def-99e3-a48b88dae38b",
+			"name": "Add Bookmark",
+			"url": "http://localhost:3000/jobs//bookmark",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 201 status code": false,
+				"response body should have correct property and value": false
+			},
+			"testPassFailCounts": {
+				"it should response 201 status code": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response body should have correct property and value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 201 status code": false,
+					"response body should have correct property and value": false
+				}
+			]
+		},
+		{
+			"id": "20793500-e601-4710-9dd3-1603afc5ecab",
+			"name": "Get All User Bookmarks",
+			"url": "http://localhost:3000/bookmarks",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "d2620d74-0344-4be0-9270-7394d3a29932",
+			"name": "Get Bookmark by Id with Invalid Id",
+			"url": "http://localhost:3000/jobs//bookmark/xxx",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 404 status code": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 404 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 404 status code": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "b027b0f6-1107-487b-9be3-61a269978409",
+			"name": "Get Bookmark by Id with Valid Id",
+			"url": "http://localhost:3000/jobs//bookmark/",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 200 status code": false,
+				"response body should have correct property and value": false
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response body should have correct property and value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": false,
+					"response body should have correct property and value": false
+				}
+			]
+		},
+		{
+			"id": "8536fbf3-0801-4e41-ac1d-cbccfea032a6",
+			"name": "Delete Bookmark",
+			"url": "http://localhost:3000/jobs//bookmark",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"it should response 200 status code": false
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": false
+				}
+			]
+		},
+		{
+			"id": "9ee2908d-505a-4da6-b1aa-bbcf13fd9dca",
 			"name": "[Setup] - Add User John",
 			"url": "http://localhost:3000/users",
-			"time": 3,
+			"time": 298,
 			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
+				"code": 500,
+				"name": "Internal Server Error"
 			},
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				3
+				298
 			],
 			"allTests": [
 				{}
 			]
 		},
 		{
-			"id": "7f494df1-979a-442b-8fd1-e59b38aa3190",
+			"id": "a81a31c6-853f-43d1-9570-c6a93f17eca7",
 			"name": "[Setup] - Add User Jane",
 			"url": "http://localhost:3000/users",
-			"time": 3,
+			"time": 259,
 			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
+				"code": 201,
+				"name": "Created"
 			},
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				3
+				259
 			],
 			"allTests": [
 				{}
 			]
 		},
 		{
-			"id": "09a580f3-4082-4900-8cce-0e8e135ad75e",
+			"id": "65593915-38d9-4eff-9032-2a8fcc82cbd6",
 			"name": "Login with Invalid Payload",
 			"url": "http://localhost:3000/authentications",
-			"time": 2,
+			"time": 3,
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request"
@@ -2721,10 +2721,10 @@
 				}
 			},
 			"times": [
-				2,
-				2,
 				3,
-				2
+				3,
+				3,
+				3
 			],
 			"allTests": [
 				{
@@ -2754,10 +2754,10 @@
 			]
 		},
 		{
-			"id": "538dd0d5-79be-4bbf-9fa1-e87bd0fede5c",
+			"id": "813c827e-660d-4fbd-aa2c-70aee25492f4",
 			"name": "Login with Not Found User",
 			"url": "http://localhost:3000/authentications",
-			"time": 4,
+			"time": 6,
 			"responseCode": {
 				"code": 401,
 				"name": "Unauthorized"
@@ -2787,7 +2787,7 @@
 				}
 			},
 			"times": [
-				4
+				6
 			],
 			"allTests": [
 				{
@@ -2799,10 +2799,10 @@
 			]
 		},
 		{
-			"id": "c5ff885e-f28a-4ec3-a379-3010c3b02a5b",
+			"id": "0c11de17-ebb8-4794-a66f-374ad668802c",
 			"name": "Login with Invalid Password",
 			"url": "http://localhost:3000/authentications",
-			"time": 3,
+			"time": 189,
 			"responseCode": {
 				"code": 401,
 				"name": "Unauthorized"
@@ -2832,7 +2832,7 @@
 				}
 			},
 			"times": [
-				3
+				189
 			],
 			"allTests": [
 				{
@@ -2844,24 +2844,24 @@
 			]
 		},
 		{
-			"id": "1eef8e32-3a4b-4d0d-a11a-06fa2fb966b2",
+			"id": "24976444-c1f6-4608-b9b6-8ef0d59bd85f",
 			"name": "Login with User John",
 			"url": "http://localhost:3000/authentications",
-			"time": 3,
+			"time": 206,
 			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
+				"code": 200,
+				"name": "OK"
 			},
 			"tests": {
-				"it should response 200 status code": false,
+				"it should response 200 status code": true,
 				"response Content-Type header should have application/json value": true,
 				"response body should an object": true,
-				"response body have correct property and value": false
+				"response body have correct property and value": true
 			},
 			"testPassFailCounts": {
 				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
+					"pass": 1,
+					"fail": 0
 				},
 				"response Content-Type header should have application/json value": {
 					"pass": 1,
@@ -2872,41 +2872,41 @@
 					"fail": 0
 				},
 				"response body have correct property and value": {
-					"pass": 0,
-					"fail": 1
+					"pass": 1,
+					"fail": 0
 				}
 			},
 			"times": [
-				3
+				206
 			],
 			"allTests": [
 				{
-					"it should response 200 status code": false,
+					"it should response 200 status code": true,
 					"response Content-Type header should have application/json value": true,
 					"response body should an object": true,
-					"response body have correct property and value": false
+					"response body have correct property and value": true
 				}
 			]
 		},
 		{
-			"id": "2b9b6393-8e7c-4996-bdef-b17223005a04",
+			"id": "80fbcc78-6d57-4200-ba47-f4e47cbc1feb",
 			"name": "Login with User Jane",
 			"url": "http://localhost:3000/authentications",
-			"time": 3,
+			"time": 198,
 			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
+				"code": 200,
+				"name": "OK"
 			},
 			"tests": {
-				"it should response 200 status code": false,
+				"it should response 200 status code": true,
 				"response Content-Type header should have application/json value": true,
 				"response body should an object": true,
-				"response body have correct property and value": false
+				"response body have correct property and value": true
 			},
 			"testPassFailCounts": {
 				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
+					"pass": 1,
+					"fail": 0
 				},
 				"response Content-Type header should have application/json value": {
 					"pass": 1,
@@ -2917,250 +2917,25 @@
 					"fail": 0
 				},
 				"response body have correct property and value": {
-					"pass": 0,
-					"fail": 1
+					"pass": 1,
+					"fail": 0
 				}
 			},
 			"times": [
-				3
+				198
 			],
 			"allTests": [
 				{
-					"it should response 200 status code": false,
+					"it should response 200 status code": true,
 					"response Content-Type header should have application/json value": true,
 					"response body should an object": true,
-					"response body have correct property and value": false
+					"response body have correct property and value": true
 				}
 			]
 		},
 		{
-			"id": "1ede69ba-91de-4bc4-918e-fa8223297c82",
+			"id": "e1f69df7-ff3b-4237-beae-ed655b4030a0",
 			"name": "Refresh Authentication with Invalid Payload",
-			"url": "http://localhost:3000/authentications",
-			"time": 2,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
-			},
-			"tests": {
-				"it should response 400 status code": true,
-				"response Content-Type header should have application/json value": true,
-				"response body should an object": true,
-				"response body have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 400 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 400 status code": true,
-					"response Content-Type header should have application/json value": true,
-					"response body should an object": true,
-					"response body have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "bde29582-a3f6-4e8e-87b0-b1ec9be14290",
-			"name": "Refresh Authentication with Invalid Token",
-			"url": "http://localhost:3000/authentications",
-			"time": 3,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 400 status code": false,
-				"response Content-Type header should have application/json value": true,
-				"response body should an object": true,
-				"response body have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 400 status code": {
-					"pass": 0,
-					"fail": 1
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 400 status code": false,
-					"response Content-Type header should have application/json value": true,
-					"response body should an object": true,
-					"response body have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "55b00cd4-ef42-456e-ab2c-3928100be85c",
-			"name": "Refresh Authentication with John Access Token",
-			"url": "http://localhost:3000/authentications",
-			"time": 2,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 400 status code": false,
-				"response Content-Type header should have application/json value": true,
-				"response body should an object": true,
-				"response body have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 400 status code": {
-					"pass": 0,
-					"fail": 1
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 400 status code": false,
-					"response Content-Type header should have application/json value": true,
-					"response body should an object": true,
-					"response body have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "a8c92c2b-9263-4d58-b1f3-b3af2e97d07c",
-			"name": "Refresh Authentication John Authentication",
-			"url": "http://localhost:3000/authentications",
-			"time": 3,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {
-				"it should response 200 status code": false,
-				"response Content-Type header should have application/json value": true,
-				"response body should an object": true,
-				"response body have correct property and value": false
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body have correct property and value": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": false,
-					"response Content-Type header should have application/json value": true,
-					"response body should an object": true,
-					"response body have correct property and value": false
-				}
-			]
-		},
-		{
-			"id": "0ab59c6a-480f-434d-8317-471e86ff144b",
-			"name": "Delete Authentication with Invalid Payload",
-			"url": "http://localhost:3000/authentications",
-			"time": 2,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
-			},
-			"tests": {
-				"it should response 400 status code": true,
-				"response Content-Type header should have application/json value": true,
-				"response body should an object": true,
-				"response body have correct property and value": true
-			},
-			"testPassFailCounts": {
-				"it should response 400 status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body have correct property and value": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				2
-			],
-			"allTests": [
-				{
-					"it should response 400 status code": true,
-					"response Content-Type header should have application/json value": true,
-					"response body should an object": true,
-					"response body have correct property and value": true
-				}
-			]
-		},
-		{
-			"id": "8f9b5ab1-0c62-4105-8c7e-c42532f91f49",
-			"name": "Delete Authentication with Invalid Token",
 			"url": "http://localhost:3000/authentications",
 			"time": 4,
 			"responseCode": {
@@ -3204,100 +2979,10 @@
 			]
 		},
 		{
-			"id": "7f77af5a-18fa-436a-b9af-1b7d37a2d196",
-			"name": "Delete Authentication John Authentication",
+			"id": "d84b58bd-458c-4050-a2ef-8e0d477257ba",
+			"name": "Refresh Authentication with Invalid Token",
 			"url": "http://localhost:3000/authentications",
-			"time": 3,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
-			},
-			"tests": {
-				"it should response 200 status code": false,
-				"response Content-Type header should have application/json value": true,
-				"response body should an object": true,
-				"response body have correct property and value": false
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body have correct property and value": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": false,
-					"response Content-Type header should have application/json value": true,
-					"response body should an object": true,
-					"response body have correct property and value": false
-				}
-			]
-		},
-		{
-			"id": "9884cd47-1b47-46a2-b63c-ccd42f51eeb2",
-			"name": "Delete Authentication Jane Authentication",
-			"url": "http://localhost:3000/authentications",
-			"time": 3,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
-			},
-			"tests": {
-				"it should response 200 status code": false,
-				"response Content-Type header should have application/json value": true,
-				"response body should an object": true,
-				"response body have correct property and value": false
-			},
-			"testPassFailCounts": {
-				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
-				},
-				"response Content-Type header should have application/json value": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body should an object": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response body have correct property and value": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				3
-			],
-			"allTests": [
-				{
-					"it should response 200 status code": false,
-					"response Content-Type header should have application/json value": true,
-					"response body should an object": true,
-					"response body have correct property and value": false
-				}
-			]
-		},
-		{
-			"id": "8c85f8ed-dd39-47e0-8620-78e506ee3c39",
-			"name": "Refresh Authentication with Deleted Authentication",
-			"url": "http://localhost:3000/authentications",
-			"time": 3,
+			"time": 5,
 			"responseCode": {
 				"code": 401,
 				"name": "Unauthorized"
@@ -3327,7 +3012,7 @@
 				}
 			},
 			"times": [
-				3
+				5
 			],
 			"allTests": [
 				{
@@ -3339,28 +3024,343 @@
 			]
 		},
 		{
-			"id": "9c71d5ca-0af6-4369-b0ad-f6c1204c782f",
-			"name": "[Setup] - Login User for Profile",
+			"id": "75942a70-a323-4043-a67c-fed154966709",
+			"name": "Refresh Authentication with John Access Token",
 			"url": "http://localhost:3000/authentications",
-			"time": 3,
+			"time": 5,
 			"responseCode": {
 				"code": 401,
 				"name": "Unauthorized"
 			},
+			"tests": {
+				"it should response 400 status code": false,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": false,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "e83a6fe9-7985-4c0a-8827-6f6d88c23a6b",
+			"name": "Refresh Authentication John Authentication",
+			"url": "http://localhost:3000/authentications",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "5cdff03d-5c45-46c0-9d43-bf4abc756def",
+			"name": "Delete Authentication with Invalid Payload",
+			"url": "http://localhost:3000/authentications",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "3a26b2cd-b99c-4140-b1fb-3cef57172db4",
+			"name": "Delete Authentication with Invalid Token",
+			"url": "http://localhost:3000/authentications",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"it should response 400 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "19ac651d-5ef5-4afc-b5a4-158fa4a30ed0",
+			"name": "Delete Authentication John Authentication",
+			"url": "http://localhost:3000/authentications",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "0e1e1e2a-84e1-4548-b15e-ccabe416cf6b",
+			"name": "Delete Authentication Jane Authentication",
+			"url": "http://localhost:3000/authentications",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"it should response 200 status code": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"it should response 200 status code": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "8edc8823-6260-4c50-9b48-0bed78cf968b",
+			"name": "Refresh Authentication with Deleted Authentication",
+			"url": "http://localhost:3000/authentications",
+			"time": 5,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"it should response 400 status code": false,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"it should response 400 status code": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"it should response 400 status code": false,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "cc3b3b07-ef52-4e77-969d-be18b41203c7",
+			"name": "[Setup] - Login User for Profile",
+			"url": "http://localhost:3000/authentications",
+			"time": 195,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				3
+				195
 			],
 			"allTests": [
 				{}
 			]
 		},
 		{
-			"id": "61cc7557-2e6a-4f3b-a810-f5e2a388cf5a",
+			"id": "45c0e135-57d6-4f7f-9b53-6b53fef84df3",
 			"name": "[Setup] Apply for Job",
 			"url": "http://localhost:3000/applications",
-			"time": 3,
+			"time": 5,
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request"
@@ -3368,14 +3368,14 @@
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				3
+				5
 			],
 			"allTests": [
 				{}
 			]
 		},
 		{
-			"id": "83ed8033-0061-4f31-aa57-6cbab56ee35b",
+			"id": "41d3260d-bebe-4d78-a50b-15ff2265c4b3",
 			"name": "Get Profile without Authentication",
 			"url": "http://localhost:3000/profile",
 			"time": 3,
@@ -3420,10 +3420,10 @@
 			]
 		},
 		{
-			"id": "86a2082f-a0e5-4ed9-ab32-b14c82d9cdbd",
+			"id": "51b48c9b-d483-47fb-a54f-ab350a2c927f",
 			"name": "Get Profile with Invalid Token",
 			"url": "http://localhost:3000/profile",
-			"time": 2,
+			"time": 3,
 			"responseCode": {
 				"code": 401,
 				"name": "Unauthorized"
@@ -3453,7 +3453,7 @@
 				}
 			},
 			"times": [
-				2
+				3
 			],
 			"allTests": [
 				{
@@ -3465,24 +3465,24 @@
 			]
 		},
 		{
-			"id": "15c65dee-0013-4dea-82f3-39a68c1be773",
+			"id": "9e17a7ec-e2bf-4fc5-8048-0f0e186dd2df",
 			"name": "Get Profile with Valid Token",
 			"url": "http://localhost:3000/profile",
-			"time": 3,
+			"time": 5,
 			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
+				"code": 200,
+				"name": "OK"
 			},
 			"tests": {
-				"it should response 200 status code": false,
+				"it should response 200 status code": true,
 				"response Content-Type header should have application/json value": true,
 				"response body should be an object": true,
 				"response body should have correct property and value": false
 			},
 			"testPassFailCounts": {
 				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
+					"pass": 1,
+					"fail": 0
 				},
 				"response Content-Type header should have application/json value": {
 					"pass": 1,
@@ -3498,11 +3498,11 @@
 				}
 			},
 			"times": [
-				3
+				5
 			],
 			"allTests": [
 				{
-					"it should response 200 status code": false,
+					"it should response 200 status code": true,
 					"response Content-Type header should have application/json value": true,
 					"response body should be an object": true,
 					"response body should have correct property and value": false
@@ -3510,10 +3510,10 @@
 			]
 		},
 		{
-			"id": "f4e43731-da58-4e7b-8f8f-06943b654c02",
+			"id": "35b9f31e-2423-4b69-8802-9bab5fc2627e",
 			"name": "Get Profile Applications without Authentication",
 			"url": "http://localhost:3000/profile/applications",
-			"time": 2,
+			"time": 3,
 			"responseCode": {
 				"code": 401,
 				"name": "Unauthorized"
@@ -3543,7 +3543,7 @@
 				}
 			},
 			"times": [
-				2
+				3
 			],
 			"allTests": [
 				{
@@ -3555,10 +3555,10 @@
 			]
 		},
 		{
-			"id": "d5aed2f8-9653-4308-adcd-b710128211f3",
+			"id": "cc4463b5-a7e6-4307-88e4-d4bdc8bf53af",
 			"name": "Get Profile Applications with Valid Token",
 			"url": "http://localhost:3000/profile/applications",
-			"time": 3,
+			"time": 8,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -3588,7 +3588,7 @@
 				}
 			},
 			"times": [
-				3
+				8
 			],
 			"allTests": [
 				{
@@ -3600,10 +3600,10 @@
 			]
 		},
 		{
-			"id": "689988ed-fd02-4640-b685-c6db52ec884a",
+			"id": "db4e0d56-8ce4-425e-9f9b-6310f3d52156",
 			"name": "Get Profile Bookmarks without Authentication",
 			"url": "http://localhost:3000/profile/bookmarks",
-			"time": 2,
+			"time": 3,
 			"responseCode": {
 				"code": 401,
 				"name": "Unauthorized"
@@ -3633,7 +3633,7 @@
 				}
 			},
 			"times": [
-				2
+				3
 			],
 			"allTests": [
 				{
@@ -3645,10 +3645,10 @@
 			]
 		},
 		{
-			"id": "230c6146-fb4c-4550-b784-a7672daa0ac5",
+			"id": "605b8460-0dbf-4153-8225-f7b49d94cc82",
 			"name": "Get Profile Bookmarks with Valid Token",
 			"url": "http://localhost:3000/profile/bookmarks",
-			"time": 3,
+			"time": 8,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -3678,7 +3678,7 @@
 				}
 			},
 			"times": [
-				3
+				8
 			],
 			"allTests": [
 				{
@@ -3690,487 +3690,487 @@
 			]
 		},
 		{
-			"id": "79dce1d9-13ba-4a1b-9e73-9fa0210ce4a6",
+			"id": "a3c1f144-07a8-4241-b2af-eb23ea97fefe",
 			"name": "[Cleanup] - Logout Profile User",
 			"url": "http://localhost:3000/authentications",
-			"time": 3,
+			"time": 5,
 			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
+				"code": 200,
+				"name": "OK"
 			},
 			"tests": {
-				"it should response 200 status code": false
+				"it should response 200 status code": true
 			},
 			"testPassFailCounts": {
 				"it should response 200 status code": {
-					"pass": 0,
-					"fail": 1
+					"pass": 1,
+					"fail": 0
 				}
 			},
 			"times": [
-				3
+				5
 			],
 			"allTests": [
 				{
-					"it should response 200 status code": false
+					"it should response 200 status code": true
 				}
 			]
 		}
 	],
 	"count": 1,
-	"totalTime": 614,
+	"totalTime": 2845,
 	"collection": {
 		"requests": [
 			{
-				"id": "09868274-d655-4433-8862-d538f5cbb4db",
+				"id": "71c45b26-95d8-413a-ae8c-1171c0b33c5b",
 				"method": "POST"
 			},
 			{
-				"id": "09868274-d655-4433-8862-d538f5cbb4db",
+				"id": "71c45b26-95d8-413a-ae8c-1171c0b33c5b",
 				"method": "POST"
 			},
 			{
-				"id": "09868274-d655-4433-8862-d538f5cbb4db",
+				"id": "71c45b26-95d8-413a-ae8c-1171c0b33c5b",
 				"method": "POST"
 			},
 			{
-				"id": "09868274-d655-4433-8862-d538f5cbb4db",
+				"id": "71c45b26-95d8-413a-ae8c-1171c0b33c5b",
 				"method": "POST"
 			},
 			{
-				"id": "09868274-d655-4433-8862-d538f5cbb4db",
+				"id": "71c45b26-95d8-413a-ae8c-1171c0b33c5b",
 				"method": "POST"
 			},
 			{
-				"id": "9149cd3a-8580-462a-892f-d2763de77812",
+				"id": "8a196dd6-c31c-4bbd-8e43-d4e56dc5c8bc",
 				"method": "POST"
 			},
 			{
-				"id": "7c2e6223-b521-42e6-97c8-aaa1e3e33382",
+				"id": "1d92af12-2d00-4a60-ab97-5af9cb4cf701",
 				"method": "GET"
 			},
 			{
-				"id": "3acdf514-70e2-40f2-892a-e2dfbd6266d8",
+				"id": "dcc2bcbb-4489-4507-a936-07e52716c724",
 				"method": "GET"
 			},
 			{
-				"id": "946100e2-2d9d-4c01-8a8c-a231b3494168",
+				"id": "253e8d0e-adcb-42d9-8f7c-162db476286f",
 				"method": "POST"
 			},
 			{
-				"id": "788731e4-6bed-4958-a8d8-e67e65f17b78",
+				"id": "914a3dd3-8370-403e-b934-980c30684eda",
 				"method": "POST"
 			},
 			{
-				"id": "b94929f7-0569-4f67-98f1-33df8213798b",
+				"id": "e745d4d6-1997-4925-be89-59bef2610052",
 				"method": "PUT"
 			},
 			{
-				"id": "4422ba59-5873-46cb-a3f2-139a89e749f4",
+				"id": "099e9313-882c-4e0e-93f9-3e06868fe366",
 				"method": "DELETE"
 			},
 			{
-				"id": "34b67bc8-3c6a-4c54-b21f-a278a601e350",
+				"id": "e8ea7ca1-785e-4801-a728-29c4f0a4b9f7",
 				"method": "POST"
 			},
 			{
-				"id": "34b67bc8-3c6a-4c54-b21f-a278a601e350",
+				"id": "e8ea7ca1-785e-4801-a728-29c4f0a4b9f7",
 				"method": "POST"
 			},
 			{
-				"id": "34b67bc8-3c6a-4c54-b21f-a278a601e350",
+				"id": "e8ea7ca1-785e-4801-a728-29c4f0a4b9f7",
 				"method": "POST"
 			},
 			{
-				"id": "c52fa226-0e46-4898-8199-2c82af79171d",
+				"id": "1ef5f7f6-b47b-45d2-bd9e-30f567746e98",
 				"method": "POST"
 			},
 			{
-				"id": "3c52d396-882d-4fa7-b553-be197abb5e61",
+				"id": "ec2eb6d9-b2bf-45c3-aa5d-dca01fd20bcb",
 				"method": "GET"
 			},
 			{
-				"id": "d3962280-70c8-4c31-8b1d-5c4673b845ae",
+				"id": "b11ca184-c942-4e9b-8d2a-2562a7e59448",
 				"method": "GET"
 			},
 			{
-				"id": "3504a787-db6d-468e-a452-7f0ca65f10ed",
+				"id": "4871a835-2f2a-43b9-8abc-3d36c24149ea",
 				"method": "GET"
 			},
 			{
-				"id": "34435c84-58e7-4e54-8057-544f44d8ef6c",
+				"id": "b12c1fee-a304-4ed0-b74f-ed600c68fdac",
 				"method": "PUT"
 			},
 			{
-				"id": "5c1dc0a0-7083-4091-967a-1531c3d91d37",
+				"id": "f214abf0-6086-40c2-af09-a9cf3b6c2ce5",
 				"method": "PUT"
 			},
 			{
-				"id": "1539eead-9644-43dd-97fa-727806c3aa64",
+				"id": "40ff85a7-40c1-48ae-8ebb-e722bb9d98bf",
 				"method": "DELETE"
 			},
 			{
-				"id": "7b77bd18-5a6d-480d-b376-ad0f81eb9e46",
+				"id": "f7555623-29d1-463f-ae33-a9e168ebaa7d",
 				"method": "DELETE"
 			},
 			{
-				"id": "0341bd42-64b5-4868-ae00-54dd7e4754a5",
+				"id": "d91ab411-c360-4dfe-92b6-0029ab615a94",
 				"method": "POST"
 			},
 			{
-				"id": "96dd0bc7-49da-43ae-bcb3-a5432f98a54b",
+				"id": "15c3dcf5-c3f0-4232-b381-b40700cbcc1e",
 				"method": "PUT"
 			},
 			{
-				"id": "a5b82a8e-c725-41e6-938e-c92d54f2ef0b",
+				"id": "3b4157aa-5f70-4515-94bd-dc3a08ad7341",
 				"method": "DELETE"
 			},
 			{
-				"id": "2be8ce41-a5c9-4a60-85ee-f276c335c33d",
+				"id": "da27b58f-50ef-407c-a335-f00f78d23088",
 				"method": "POST"
 			},
 			{
-				"id": "2be8ce41-a5c9-4a60-85ee-f276c335c33d",
+				"id": "da27b58f-50ef-407c-a335-f00f78d23088",
 				"method": "POST"
 			},
 			{
-				"id": "2be8ce41-a5c9-4a60-85ee-f276c335c33d",
+				"id": "da27b58f-50ef-407c-a335-f00f78d23088",
 				"method": "POST"
 			},
 			{
-				"id": "27e629c3-1008-494f-aa21-4f3ea984b634",
+				"id": "66f5a9ba-a58a-4430-ba15-d036b4a4459a",
 				"method": "GET"
 			},
 			{
-				"id": "c26d2c04-5935-497c-9377-eea65c1bda86",
+				"id": "5896b89d-9c04-4b48-8548-88af355759ba",
 				"method": "PUT"
 			},
 			{
-				"id": "881834c4-1210-47bb-9eaa-8198c2b38b91",
+				"id": "b70f54f9-159c-4622-8b91-ad063d5fa0cc",
 				"method": "DELETE"
 			},
 			{
-				"id": "e34cbf41-34ab-4ad5-acc8-577728bb3557",
+				"id": "cf475536-5759-4bca-8240-d4b64fe1ab7f",
 				"method": "POST"
 			},
 			{
-				"id": "f86488b6-fc30-4344-8f2f-18ed5efced5f",
+				"id": "ddcf16eb-a6e8-429b-b87c-ddb94bc464ac",
 				"method": "GET"
 			},
 			{
-				"id": "64225ce6-1e3e-454c-af51-06720fffe076",
+				"id": "87b4fe25-8ec1-445a-b634-c41449656065",
 				"method": "GET"
 			},
 			{
-				"id": "ea13e574-91a5-4c06-9bb1-01bf70405dcc",
+				"id": "74b9fd85-b008-438a-aabb-be331015d7ba",
 				"method": "PUT"
 			},
 			{
-				"id": "064c0014-8f77-416a-98d2-16dd22606a9e",
+				"id": "c25575d6-f23b-4902-9d6b-dfc748f0333f",
 				"method": "DELETE"
 			},
 			{
-				"id": "c9747cfc-460c-4e23-a512-fc9120e511ee",
+				"id": "47bb0145-7665-4b46-b289-3f5fee7e978f",
 				"method": "POST"
 			},
 			{
-				"id": "29ed4fc5-d54a-4ffe-9139-88c75fe21432",
+				"id": "4dda1f78-792c-4934-936a-1360c01b3685",
 				"method": "POST"
 			},
 			{
-				"id": "589c57ff-c0d1-409e-9961-bee4409ff136",
+				"id": "737788e9-42d1-434f-bc79-af0a1c64131e",
 				"method": "POST"
 			},
 			{
-				"id": "73edb9e9-e9ae-4a8d-8a2e-ac0dd542ca8f",
+				"id": "2bb14fc4-e69b-43e6-82ac-34bf095bc406",
 				"method": "PUT"
 			},
 			{
-				"id": "31294a65-cd2d-4f58-8ba2-41f042c9324c",
+				"id": "4f2d5fdd-d7e5-4707-a7cd-44e82e8029b4",
 				"method": "DELETE"
 			},
 			{
-				"id": "82735776-927a-4199-83c5-7fc7c540fcaf",
+				"id": "fbebeb8a-d77b-4a05-9e16-cb2d3fc720b7",
 				"method": "POST"
 			},
 			{
-				"id": "82735776-927a-4199-83c5-7fc7c540fcaf",
+				"id": "fbebeb8a-d77b-4a05-9e16-cb2d3fc720b7",
 				"method": "POST"
 			},
 			{
-				"id": "82735776-927a-4199-83c5-7fc7c540fcaf",
+				"id": "fbebeb8a-d77b-4a05-9e16-cb2d3fc720b7",
 				"method": "POST"
 			},
 			{
-				"id": "f5e40489-6c50-4e69-a9d9-32cc32a2a8ac",
+				"id": "4090c868-efce-4d6f-90c5-2d592fc47c4d",
 				"method": "POST"
 			},
 			{
-				"id": "e2c24aaa-29ae-45d0-a318-d2a8b0fa8a16",
+				"id": "0f78c612-67cb-4be7-a82a-a13e1070153c",
 				"method": "GET"
 			},
 			{
-				"id": "f816ed97-b984-4c85-9971-52183901afdb",
+				"id": "81f33187-be75-4f1d-98a3-b708647ebc18",
 				"method": "GET"
 			},
 			{
-				"id": "327d4037-84ec-4bf0-bcb8-bec25ba342e3",
+				"id": "84f8aa86-7209-462d-b499-c8f90d82ea38",
 				"method": "GET"
 			},
 			{
-				"id": "6606031c-783a-4847-b48e-f7ed06e9f9c8",
+				"id": "3176b5b1-2942-4a3c-815e-0ea3f0c03f4e",
 				"method": "GET"
 			},
 			{
-				"id": "4412f122-1c35-4b23-a0c3-5df6570a421f",
+				"id": "1305d127-7b2e-47c3-af88-762cb0895036",
 				"method": "GET"
 			},
 			{
-				"id": "a982a258-427d-41dc-8385-47d0dcf60efe",
+				"id": "6c3fbfbb-8b5a-4797-88b0-f6ca05dcb4ee",
 				"method": "GET"
 			},
 			{
-				"id": "baef58c4-e0aa-4a45-b19c-baeda3914d54",
+				"id": "43924267-3368-4e7f-8096-508bdaabb895",
 				"method": "GET"
 			},
 			{
-				"id": "fc86dab7-c8c4-4de0-b835-b41225ab05ae",
+				"id": "1e25db0c-18e9-46a0-a9af-df8bf76e95ba",
 				"method": "GET"
 			},
 			{
-				"id": "3045050e-aa58-47e3-a8ec-c986fd741743",
+				"id": "fe164c50-e02e-433e-b995-54e13fc4e4b8",
 				"method": "GET"
 			},
 			{
-				"id": "188f0174-30cf-401d-868d-8f5a8922b02a",
+				"id": "81fdf677-d296-45ea-9174-a95d25ce8ea8",
 				"method": "GET"
 			},
 			{
-				"id": "f70c7466-88ea-4efb-9d18-35309aac3e2c",
+				"id": "bad7517c-afd1-4a6e-a80a-8a9b858c9048",
 				"method": "GET"
 			},
 			{
-				"id": "945cab14-52c2-4abc-bdc6-408ecdd5207e",
+				"id": "82c217e5-ecf7-4be9-89f4-47b3d583fb42",
 				"method": "GET"
 			},
 			{
-				"id": "f565709e-9cfc-45ab-88b1-4928019c9e0f",
+				"id": "e40618da-ea37-4d8c-b351-1c4aac36bf79",
 				"method": "PUT"
 			},
 			{
-				"id": "f2f24b86-9a2e-4edd-90df-d283621de86e",
+				"id": "e8ee9e2d-ccb7-4a93-a967-9939dfc633c3",
 				"method": "DELETE"
 			},
 			{
-				"id": "db6e5113-b59c-4353-86be-ea503d0de2ce",
+				"id": "d8bc94f7-0f5a-42d1-bd02-e0e6cdcbbcaf",
 				"method": "POST"
 			},
 			{
-				"id": "062107c8-8483-4d2a-89d9-10ddb838ade6",
+				"id": "1b1bfa07-c1cb-40fd-9003-47ddd53364d1",
 				"method": "POST"
 			},
 			{
-				"id": "fd0b9893-a282-4a70-beaf-226008ae7b8c",
+				"id": "175f9733-72db-4da5-acf8-ddcbf78cb96f",
 				"method": "GET"
 			},
 			{
-				"id": "c0418516-4d48-4c51-8458-6454b29e6a87",
+				"id": "0108d124-748f-4905-9bdf-78b6cbf1a6fd",
 				"method": "GET"
 			},
 			{
-				"id": "16739929-ad23-4907-9c9a-b555019395e4",
+				"id": "96e43270-2ffb-4692-b262-15505872d139",
 				"method": "POST"
 			},
 			{
-				"id": "69184888-b37c-44f5-9392-5bcc2362d940",
+				"id": "b55be3b9-ae4f-455a-932a-920654961823",
 				"method": "GET"
 			},
 			{
-				"id": "f8515d8d-0ade-4be6-8272-d77442c8ee20",
+				"id": "2f2499bb-9657-4a62-bd62-7d862d0e79bd",
 				"method": "GET"
 			},
 			{
-				"id": "400929ad-9463-4327-be6d-514fe10dfceb",
+				"id": "1d14235d-f649-4f56-8a48-75c0312e64b3",
 				"method": "GET"
 			},
 			{
-				"id": "d03ef17b-bc52-4482-97bf-b00390122f02",
+				"id": "2a18d341-340f-442f-a144-ff365b713d82",
 				"method": "GET"
 			},
 			{
-				"id": "cbf2e0a7-95f2-45cf-bfa8-7917c2ee9668",
+				"id": "7de37afd-7462-4a31-906b-c0aeec3347f1",
 				"method": "GET"
 			},
 			{
-				"id": "9547b36e-501b-420c-82cf-c0114640cb5b",
+				"id": "a6ab6f41-25ae-4d9f-88de-18fa2d8fe75e",
 				"method": "GET"
 			},
 			{
-				"id": "a6b7e01c-796b-4729-8542-4723875c7800",
+				"id": "03c55128-1ae4-47b0-a724-17697f81ba95",
 				"method": "GET"
 			},
 			{
-				"id": "80eabc87-d907-4d2c-8a54-a4a4cc3b3896",
+				"id": "74b3b8a2-719f-452d-8654-b53fb175075f",
 				"method": "GET"
 			},
 			{
-				"id": "d93ec5ec-1ee0-4bc1-8733-171bddb33f6b",
+				"id": "0013b947-1c8f-49f0-9d53-7b8df2e26573",
 				"method": "PUT"
 			},
 			{
-				"id": "a482e75a-bc63-4195-9dca-5a91017cf982",
+				"id": "181dea9d-6dfb-4da1-ac5c-88e0034f1815",
 				"method": "DELETE"
 			},
 			{
-				"id": "c7f790fb-60f3-4a16-a7e6-c000c4afc1dd",
+				"id": "0a13db9c-5e3b-466a-a22b-ca215122754e",
 				"method": "POST"
 			},
 			{
-				"id": "646036eb-2aa9-482c-b91f-272a12dbef82",
+				"id": "ed4eb5e6-c52e-465a-b310-a8a69e225cff",
 				"method": "POST"
 			},
 			{
-				"id": "490377c4-190a-49fe-ad32-2431969ca6c5",
+				"id": "2c782e0c-4a61-4629-a2f8-33b75c9ca4e4",
 				"method": "GET"
 			},
 			{
-				"id": "45e40b76-7431-4a4f-a2df-0964bd8139bb",
+				"id": "9bf1e806-0205-4907-bdcc-5d0cb001faf2",
 				"method": "DELETE"
 			},
 			{
-				"id": "1255d4d3-5f94-4233-adc4-81af55187d5a",
+				"id": "4445ac5b-8af5-4def-99e3-a48b88dae38b",
 				"method": "POST"
 			},
 			{
-				"id": "49e2ab6e-5f74-4b65-8901-a8f068a44820",
+				"id": "20793500-e601-4710-9dd3-1603afc5ecab",
 				"method": "GET"
 			},
 			{
-				"id": "134ab4f4-7de2-4641-bd6a-8970d045f436",
+				"id": "d2620d74-0344-4be0-9270-7394d3a29932",
 				"method": "GET"
 			},
 			{
-				"id": "d26453ff-cd9f-43f4-8424-d37a95871add",
+				"id": "b027b0f6-1107-487b-9be3-61a269978409",
 				"method": "GET"
 			},
 			{
-				"id": "d809f26e-5f50-4ee8-92a5-9264a74abe5b",
+				"id": "8536fbf3-0801-4e41-ac1d-cbccfea032a6",
 				"method": "DELETE"
 			},
 			{
-				"id": "0945aac9-42c2-43f3-823f-5bbbbffab425",
+				"id": "9ee2908d-505a-4da6-b1aa-bbcf13fd9dca",
 				"method": "POST"
 			},
 			{
-				"id": "7f494df1-979a-442b-8fd1-e59b38aa3190",
+				"id": "a81a31c6-853f-43d1-9570-c6a93f17eca7",
 				"method": "POST"
 			},
 			{
-				"id": "09a580f3-4082-4900-8cce-0e8e135ad75e",
+				"id": "65593915-38d9-4eff-9032-2a8fcc82cbd6",
 				"method": "POST"
 			},
 			{
-				"id": "09a580f3-4082-4900-8cce-0e8e135ad75e",
+				"id": "65593915-38d9-4eff-9032-2a8fcc82cbd6",
 				"method": "POST"
 			},
 			{
-				"id": "09a580f3-4082-4900-8cce-0e8e135ad75e",
+				"id": "65593915-38d9-4eff-9032-2a8fcc82cbd6",
 				"method": "POST"
 			},
 			{
-				"id": "09a580f3-4082-4900-8cce-0e8e135ad75e",
+				"id": "65593915-38d9-4eff-9032-2a8fcc82cbd6",
 				"method": "POST"
 			},
 			{
-				"id": "538dd0d5-79be-4bbf-9fa1-e87bd0fede5c",
+				"id": "813c827e-660d-4fbd-aa2c-70aee25492f4",
 				"method": "POST"
 			},
 			{
-				"id": "c5ff885e-f28a-4ec3-a379-3010c3b02a5b",
+				"id": "0c11de17-ebb8-4794-a66f-374ad668802c",
 				"method": "POST"
 			},
 			{
-				"id": "1eef8e32-3a4b-4d0d-a11a-06fa2fb966b2",
+				"id": "24976444-c1f6-4608-b9b6-8ef0d59bd85f",
 				"method": "POST"
 			},
 			{
-				"id": "2b9b6393-8e7c-4996-bdef-b17223005a04",
+				"id": "80fbcc78-6d57-4200-ba47-f4e47cbc1feb",
 				"method": "POST"
 			},
 			{
-				"id": "1ede69ba-91de-4bc4-918e-fa8223297c82",
+				"id": "e1f69df7-ff3b-4237-beae-ed655b4030a0",
 				"method": "PUT"
 			},
 			{
-				"id": "bde29582-a3f6-4e8e-87b0-b1ec9be14290",
+				"id": "d84b58bd-458c-4050-a2ef-8e0d477257ba",
 				"method": "PUT"
 			},
 			{
-				"id": "55b00cd4-ef42-456e-ab2c-3928100be85c",
+				"id": "75942a70-a323-4043-a67c-fed154966709",
 				"method": "PUT"
 			},
 			{
-				"id": "a8c92c2b-9263-4d58-b1f3-b3af2e97d07c",
+				"id": "e83a6fe9-7985-4c0a-8827-6f6d88c23a6b",
 				"method": "PUT"
 			},
 			{
-				"id": "0ab59c6a-480f-434d-8317-471e86ff144b",
+				"id": "5cdff03d-5c45-46c0-9d43-bf4abc756def",
 				"method": "DELETE"
 			},
 			{
-				"id": "8f9b5ab1-0c62-4105-8c7e-c42532f91f49",
+				"id": "3a26b2cd-b99c-4140-b1fb-3cef57172db4",
 				"method": "DELETE"
 			},
 			{
-				"id": "7f77af5a-18fa-436a-b9af-1b7d37a2d196",
+				"id": "19ac651d-5ef5-4afc-b5a4-158fa4a30ed0",
 				"method": "DELETE"
 			},
 			{
-				"id": "9884cd47-1b47-46a2-b63c-ccd42f51eeb2",
+				"id": "0e1e1e2a-84e1-4548-b15e-ccabe416cf6b",
 				"method": "DELETE"
 			},
 			{
-				"id": "8c85f8ed-dd39-47e0-8620-78e506ee3c39",
+				"id": "8edc8823-6260-4c50-9b48-0bed78cf968b",
 				"method": "PUT"
 			},
 			{
-				"id": "9c71d5ca-0af6-4369-b0ad-f6c1204c782f",
+				"id": "cc3b3b07-ef52-4e77-969d-be18b41203c7",
 				"method": "POST"
 			},
 			{
-				"id": "61cc7557-2e6a-4f3b-a810-f5e2a388cf5a",
+				"id": "45c0e135-57d6-4f7f-9b53-6b53fef84df3",
 				"method": "POST"
 			},
 			{
-				"id": "83ed8033-0061-4f31-aa57-6cbab56ee35b",
+				"id": "41d3260d-bebe-4d78-a50b-15ff2265c4b3",
 				"method": "GET"
 			},
 			{
-				"id": "86a2082f-a0e5-4ed9-ab32-b14c82d9cdbd",
+				"id": "51b48c9b-d483-47fb-a54f-ab350a2c927f",
 				"method": "GET"
 			},
 			{
-				"id": "15c65dee-0013-4dea-82f3-39a68c1be773",
+				"id": "9e17a7ec-e2bf-4fc5-8048-0f0e186dd2df",
 				"method": "GET"
 			},
 			{
-				"id": "f4e43731-da58-4e7b-8f8f-06943b654c02",
+				"id": "35b9f31e-2423-4b69-8802-9bab5fc2627e",
 				"method": "GET"
 			},
 			{
-				"id": "d5aed2f8-9653-4308-adcd-b710128211f3",
+				"id": "cc4463b5-a7e6-4307-88e4-d4bdc8bf53af",
 				"method": "GET"
 			},
 			{
-				"id": "689988ed-fd02-4640-b685-c6db52ec884a",
+				"id": "db4e0d56-8ce4-425e-9f9b-6310f3d52156",
 				"method": "GET"
 			},
 			{
-				"id": "230c6146-fb4c-4550-b784-a7672daa0ac5",
+				"id": "605b8460-0dbf-4153-8225-f7b49d94cc82",
 				"method": "GET"
 			},
 			{
-				"id": "79dce1d9-13ba-4a1b-9e73-9fa0210ce4a6",
+				"id": "a3c1f144-07a8-4241-b2af-eb23ea97fefe",
 				"method": "DELETE"
 			}
 		]

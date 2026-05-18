@@ -5,7 +5,7 @@ const { NotFoundError, InvariantError, AuthorizationError } = require('../utils/
 const createApplication = async ({ user_id, job_id, cover_letter }) => {
   const id = `app-${uuidv4()}`;
   const result = await pool.query(
-    'INSERT INTO applications (id, user_id, job_id, cover_letter) VALUES ($1,$2,$3,$4) RETURNING id, status',
+    'INSERT INTO applications (id, user_id, job_id, cover_letter) VALUES ($1,$2,$3,$4) RETURNING id, user_id, job_id, cover_letter, status, created_at, updated_at',
     [id, user_id, job_id, cover_letter]
   );
   if (!result.rowCount) throw new InvariantError('Failed to create application');
@@ -72,7 +72,7 @@ const updateApplicationStatus = async (id, userId, status) => {
   if (!app.rowCount) throw new NotFoundError('Application not found');
 
   const result = await pool.query(
-    'UPDATE applications SET status=$1, updated_at=current_timestamp WHERE id=$2 RETURNING id, status',
+    'UPDATE applications SET status=$1, updated_at=current_timestamp WHERE id=$2 RETURNING id, user_id, job_id, cover_letter, status, created_at, updated_at',
     [status, id]
   );
   return result.rows[0];
